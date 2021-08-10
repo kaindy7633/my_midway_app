@@ -20,3 +20,13 @@ content-type: application/json
 {
   "id": "abc123456"
 }
+
+### 使用ALL获取Body中的所有JSON参数
+POST http://localhost:7001/api/user/getUserByAll HTTP/1.1
+content-type: application/json
+
+{
+  "id": "1234567890",
+  "name": "Kaindy Liu",
+  "age": 45
+}

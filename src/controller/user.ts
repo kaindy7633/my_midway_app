@@ -49,4 +49,14 @@ export class UserController {
       age: 45,
     };
   }
+
+  // 通过POST获取所有Body中的JSON参数
+  @Post('/getUserByAll')
+  async updateUserByAll(@Body(ALL) user: IUser): Promise<IUser> {
+    return {
+      id: user.id,
+      name: user.name,
+      age: user.age,
+    };
+  }
 }
