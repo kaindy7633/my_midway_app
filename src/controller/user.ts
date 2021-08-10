@@ -6,6 +6,7 @@ import {
   ALL,
   Post,
   Body,
+  Param,
 } from '@midwayjs/decorator';
 import { IUser } from '../interface';
 
@@ -57,6 +58,17 @@ export class UserController {
       id: user.id,
       name: user.name,
       age: user.age,
+    };
+  }
+
+  // 通过Param获取参数
+  @Get('/:uid')
+  async findUser(@Param() uid: string): Promise<IUser> {
+    if (!uid) return null;
+    return {
+      id: uid,
+      name: 'HEHE',
+      age: 18,
     };
   }
 }
