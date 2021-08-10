@@ -9,3 +9,6 @@ GET http://localhost:7001/api/user?id=1234567 HTTP/1.1
 
 ### 指定别名方法
 GET http://localhost:7001/api/user/alias?id=987654321 HTTP/1.1
+
+### 使用ALL获取所有的Query参数
+GET http://localhost:7001/api/user/all?id=123456&name=Kaindy&age=45 HTTP/1.1

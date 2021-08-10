@@ -1,4 +1,4 @@
-import { Controller, Provide, Get, Query } from '@midwayjs/decorator';
+import { Controller, Provide, Get, Query, ALL } from '@midwayjs/decorator';
 import { IUser } from '../interface';
 
 @Provide()
@@ -24,5 +24,11 @@ export class UserController {
       name: 'LiuZhen',
       age: 45,
     };
+  }
+
+  // 使用 ALL 获取所有的Query参数
+  @Get('/all')
+  async getUserByAllQuery(@Query(ALL) queryObject: Record<string, unknown>) {
+    return queryObject;
   }
 }
