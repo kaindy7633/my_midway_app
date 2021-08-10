@@ -4,3 +4,8 @@ GET http://localhost:7001/ HTTP/1.1
 ### Home Controller Post Test
 POST http://localhost:7001/update HTTP/1.1
 
+### HTTP code
+GET http://localhost:7001/http-code HTTP/1.1
+
+### Set Header
+GET http://localhost:7001/header HTTP/1.1
