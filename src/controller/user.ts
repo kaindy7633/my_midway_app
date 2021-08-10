@@ -1,4 +1,12 @@
-import { Controller, Provide, Get, Query, ALL } from '@midwayjs/decorator';
+import {
+  Controller,
+  Provide,
+  Get,
+  Query,
+  ALL,
+  Post,
+  Body,
+} from '@midwayjs/decorator';
 import { IUser } from '../interface';
 
 @Provide()
@@ -30,5 +38,15 @@ export class UserController {
   @Get('/all')
   async getUserByAllQuery(@Query(ALL) queryObject: Record<string, unknown>) {
     return queryObject;
+  }
+
+  // 获取单个Body参数
+  @Post('/getUserByPost')
+  async updateUser(@Body() id: string): Promise<IUser> {
+    return {
+      id,
+      name: 'LiuZhen by Body',
+      age: 45,
+    };
   }
 }
