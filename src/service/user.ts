@@ -3,12 +3,12 @@ import { IUserOptions } from '../interface';
 
 @Provide()
 export class UserService {
-  async getUser(options: IUserOptions) {
+  async getUser({ uid }): Promise<IUserOptions> {
+    if (!uid) return null;
     return {
-      uid: options.uid,
-      username: 'mockedName',
-      phone: '12345678901',
-      email: 'xxx.xxx@xxx.com',
+      uid,
+      name: 'Harry',
+      age: 18,
     };
   }
 }

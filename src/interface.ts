@@ -3,6 +3,8 @@
  */
 export interface IUserOptions {
   uid: string;
+  name: string;
+  age: number;
 }
 
 export interface IGetUserResponse {

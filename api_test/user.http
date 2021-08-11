@@ -27,3 +27,6 @@ content-type: application/json
 
 ### 通过Param获取参数
 GET http://localhost:7001/api/user/12345678abc HTTP/1.1
+
+### 通过Service获取数据
+GET http://localhost:7001/api/get_user?id=123456 HTTP/1.1

@@ -9,3 +9,9 @@ GET http://localhost:7001/http-code HTTP/1.1
 
 ### Set Header
 GET http://localhost:7001/header HTTP/1.1
+
+### Set Multiple Header
+GET http://localhost:7001/multiple-header HTTP/1.1
+
+### 自定义响应类型
+GET http://localhost:7001/custom-content-type HTTP/1.1
