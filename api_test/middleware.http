@@ -1,0 +1,2 @@
+### 测试有路由中间件的借口
+GET http://localhost:7001/api/handle_middleware HTTP/1.1
