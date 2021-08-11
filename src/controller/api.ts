@@ -5,6 +5,7 @@ import { UserService } from '../service/user';
 @Provide()
 @Controller('/api/get_user')
 export class APIController {
+  // 将UserService注入
   @Inject()
   userService: UserService;
 

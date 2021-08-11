@@ -1,0 +1,2 @@
+### 测试通过注入的App获取远程数据
+GET http://localhost:7001/api/get_application HTTP/1.1

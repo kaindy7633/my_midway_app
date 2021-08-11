@@ -1,0 +1,2 @@
+### 测试获取Context上下文对象的借口
+GET http://localhost:7001/api/get_context?name=Kaindy HTTP/1.1
